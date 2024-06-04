@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <html lang="fr">
 <head>
-    <style>
+    
+<!--     <style>
 
         .part {
             display: flex;
@@ -60,10 +61,13 @@
         }
 
 
-    </style>
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="test.css" />
+
     <title> Portfolio </title>
 </head>
 <body>
+
     <div><p>sdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddas
     sdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddas
     sdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddas
@@ -265,10 +269,19 @@
         </div>
 
         <div class="column">
-            <a  id="IUT2"  class="row">IUT2</a>
-            <a id="Lycée" class="row">Lycée</a>
+            <section>
+                <img id="triangle-IUT2" src="/img/triangle.svg" alt="">
+                <a id="IUT2"  class="row">IUT2</a>
+            </section>
+
+            <section>
+                <img id="triange-Lycee" src="/img/triangle.svg" alt="">
+                <a id="Lycée" class="row">Lycée</a>
+            </section>
+            
         </div>
     </div>
+
 
 
     <div><p>sdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddassdadasasddas
@@ -518,8 +531,12 @@
     const container1 = document.getElementById('IUT2');
     const container2 = document.getElementById('Lycée');
 
+
     const side1 = document.getElementById('IUT2_Content');
+    const container1Triangle = document.getElementById('triangle-IUT2');
     const side2 = document.getElementById('Lycee_Content');
+    const container2Triangle = document.getElementById('triangle-Lycee');
+
 
     const rect1 = container1.getBoundingClientRect();
     const rect2 = container2.getBoundingClientRect();
@@ -527,7 +544,9 @@
     // Initial state when the page is loaded
     if (window.scrollY === 0) {
         side1.style.display = 'block';
+        container1Triangle.style.display = 'block';
         side2.style.display = 'none';
+        container2Triangle.style.display = 'none';
         container1.classList.add('highlight');
         container2.classList.remove('highlight')
 
@@ -536,14 +555,18 @@
     // Check if container2 is in view and container1 is not in view
     if (rect2.top <= window.innerHeight / 2 && rect2.bottom >= window.innerHeight / 2) {
         side1.style.display = 'none';
+        container1Triangle.style.display = 'none';
         side2.style.display = 'block';
+        container2Triangle.style.display = 'block';
         container1.classList.remove('highlight');
         container2.classList.add('highlight')
     } 
     // Check if container1 is in view and container2 is not in view
     else if (rect1.top <= window.innerHeight / 2 && rect1.bottom >= window.innerHeight / 2) {
         side1.style.display = 'block';
+        container1Triangle.style.display = 'block';
         side2.style.display = 'none';
+        container2Triangle.style.display = 'none';
         container1.classList.add('highlight');
         container2.classList.remove('highlight')
     }
@@ -579,8 +602,6 @@
     }
     });
     
-    
-
 
     </script>
 

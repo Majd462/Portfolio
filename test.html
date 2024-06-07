@@ -98,16 +98,34 @@
 
     <div class="code" id="code">
         <div class="part">
-            <div class="content" id="IUT2_Content">ds</div>
-            <div class="content" id="Lycee_Content">dsddsaas</div>
-            <div class="content" id="Nouveau_Content">fsd</div>
+            <div class="content" id="Content1">
+                <h1>Classification automatique des dépêches</h1>
+                <p>Durant ce projet, j'ai du réaliser un programme en Java qui permettait de classifier un ensemble de depeches en plusieurs catégories.  </p>
+            </div>
+            <div class="content" id="Content2">
+                <h1>Etude du Titanic</h1>
+                <p>Durant ce projet, j;ai du réaliser une étude sur les chances de survice lors du naufrage du Titanic. J'ai du  </p>
+            </div>
+            <div class="content" id="Content3">
+                <h1>Création d'un site web</h1>
+            </div>
+            <div class="content" id="Content4">
+                <h1>Application en Java</h1>
+            </div>
+            <div class="content" id="Content5">
+                <h1>Installation d'un serveur</h1>
+            </div>
+            <div class="content" id="Content6">
+                <h1>Exploitation d'une base de données</h1>
+            </div>
+
         </div>
 
         <div class="column">
             <section>
-                <img id="triangle-IUT2" src="/img/triangle.svg" alt="">
-                <div id="IUT2"  class="row">
-                    <p>Classification automatique des depeches</p>
+                <img id="Triangle1" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element1"  class="row">
+                    <p>Classification automatique des dépêches </p>
                     <figure>
                         <img class="logo" src="/img/java.png"  alt="">
                     </figure>
@@ -116,8 +134,8 @@
             </section>
 
             <section>
-                <img id="triangle-Lycee" src="/img/triangle.svg" alt="">
-                <div id="Lycée" class="row">
+                <img id="Triangle2" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element2" class="row">
                     <p>Etude du Titanic</p>
                     <figure>
                         <img class="logo" src="/img/postgresql.png"  alt="">
@@ -126,14 +144,50 @@
             </section>
 
             <section>
-    <img id="triangle-Nouveau" src="/img/triangle.svg" alt="">
-    <div id="Nouveau" class="row">
-        <p>Nouveau contenu</p>
-        <figure>
-            <img class="logo" src="/img/nouveau_logo.png" alt="">
-        </figure>
-    </div>
-</section>
+                <img id="Triangle3" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element3" class="row">
+                    <p>Création d'un site web</p>
+                    <figure>
+                        <img class="logo" src="/img/html.png" alt="">
+                        <img class="logo" src="/img/css.png" alt="">
+
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <img id="Triangle4" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element4" class="row">
+                    <p>Application en Java</p>
+                    <figure>
+                        <img class="logo" src="/img/java.png" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle5" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element5" class="row">
+                    <p>Installation d'un serveur</p>
+                    <figure>
+                        <img class="logo" src="/img/debian.png" alt="">
+                        <img class="logo" src="/img/postgresql.png" alt="">
+                        <img class="logo" src="/img/php.png" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle6" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element6" class="row">
+                    <p>Exploitation d'une base de données</p>
+                    <figure>
+                        <img class="logo" src="/img/postgresql.png" alt="">
+                        <img class="logo" src="/img/R.png" alt="">
+
+                    </figure>
+                </div>
+            </section>
+
             
         </div>
     </div>
@@ -381,7 +435,7 @@
 
 
     <script>
-
+        /*
     window.addEventListener('scroll', function() {
 
     const container1 = document.getElementById('IUT2');
@@ -393,11 +447,15 @@
     const container1Triangle = document.getElementById('triangle-IUT2');
     const side2 = document.getElementById('Lycee_Content');
     const container2Triangle = document.getElementById('triangle-Lycee');
+    const side3 = document.getElementById('Triangle_Content');
+    const container3Triangle = document.getElementById('triangle-Nouveau');
 
     
 
     const rect1 = container1.getBoundingClientRect();
     const rect2 = container2.getBoundingClientRect();
+    const rect3 = container3.getBoundingClientRect();
+
 
     // Initial state when the page is loaded
     if (window.scrollY === 0) {
@@ -406,8 +464,7 @@
         side2.style.display = 'none';
         container2Triangle.style.visibility = 'hidden';
         container1.classList.add('highlight');
-        container2.classList.remove('highlight')
-
+        
     }
 
     // Check if container2 is in view and container1 is not in view
@@ -429,9 +486,7 @@
         container2.classList.remove('highlight')
     }
 });
-
-
-    
+ 
     document.getElementById('IUT2').addEventListener('click', function() {
         const container1 = document.getElementById('IUT2');
         const side1 = document.getElementById('IUT2_Content');
@@ -459,8 +514,89 @@
         });
     }
     });
+*/
+
+        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var content = document.getElementById('Element1')
+            showContent(content.id)
+            Element1.classList.add('highlight')
+        });
 
 
+        function showContent(elementId) {
+    // Cacher tous les contenus
+    var allContents = document.querySelectorAll('.content');
+    var triangleContents = document.querySelectorAll('.triangle');
+    triangleContents.forEach(function(content) {
+        content.style.visibility = 'hidden';
+    });
+
+    allContents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Afficher le contenu associé à l'élément cliqué
+    var contentId = elementId.replace('Element', 'Content');
+    var contentTriangleId = elementId.replace('Element', 'Triangle');
+
+    var contentToShow = document.getElementById(contentId);
+
+    if (contentToShow) {
+        contentToShow.style.display = 'flex';
+        
+    }
+
+    var contentTriangleToShow = document.getElementById(contentTriangleId);
+    if (contentTriangleToShow) {
+        contentTriangleToShow.style.visibility = 'visible';
+    }
+}
+
+        // Ajouter des écouteurs d'événements à tous les éléments
+        var allElements = document.querySelectorAll('.row');
+        allElements.forEach(function(element) {
+
+
+        element.addEventListener('click', function(event) {
+        // Empêcher le comportement par défaut du lien
+        event.preventDefault();
+
+        // Appliquer la classe 'highlight' à l'élément cliqué
+        var currentHighlight = document.querySelector('.highlight');
+        if (currentHighlight) {
+            currentHighlight.classList.remove('highlight');
+        }
+        element.classList.add('highlight');
+
+        // Afficher le contenu associé
+        showContent(element.id);
+    });
+});
+
+        function isElementInMiddle(el) {
+            var rect = el.getBoundingClientRect();
+            return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+        }
+
+        function handleScroll() {
+    var allElements = document.querySelectorAll('.row');
+    allElements.forEach(function(element) {
+        if (isElementInMiddle(element)) {
+            // Appliquer la classe 'highlight' à l'élément au milieu de l'écran
+            var currentHighlight = document.querySelector('.highlight');
+            if (currentHighlight) {
+                currentHighlight.classList.remove('highlight');
+            }
+            element.classList.add('highlight');
+
+            // Afficher le contenu associé
+            showContent(element.id);
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
 
 
     

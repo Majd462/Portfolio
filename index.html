@@ -1,95 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mozilla Acorn</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        .header { display: flex; justify-content: space-between; align-items: center; background-color: #F0EBE3; padding: 10px 20px; }
-        .header img { height: 50px; }
-        .nav-links { list-style-type: none; margin: 0; padding: 0; }
-        .nav-links li { display: inline; margin-right: 20px; }
-        .nav-links a { text-decoration: none; color: black; font-size: 16px; }
-        .nav-links a:hover { text-decoration: underline; }
+    
+    <link rel="stylesheet" type="text/css" href="test.css" />
 
-        .centered-div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /*height: 100vh;*/
-            background-color: grey;
-        }
-
-         .container {
-             display: flex;
-             justify-content: space-between;
-         }
-        .left, .right {
-            width: 50%;
-            height: 200px;
-            border: 1px solid black;
-            padding: 10px;
-            box-sizing: border-box;
-            overflow-y: auto;
-        }
-        .right div {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid black;
-        }
-        .right div:hover {
-            background-color: yellow;
-        }
-        .left div {
-            display: none;
-        }
-    </style>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.right div').hover(function(){
-                var info = $(this).attr('data-info');
-                $('.left div').hide();
-                $('#' + info).show();
-            }, function(){
-                $('.left div').hide();
-            });
-        });
-    </script>
+    <title> Portfolio </title>
 </head>
 <body>
+    
 
-    <div class="header">
-        <img src="img/mstile-144x144.png" alt="Mozilla Acorn Logo">
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-
-    <div class="centered-div">
-        <p>Formation</p>
-    </div>
-
-
-    <div class="container">
-        <div class="left">
-            <div id="info1">Information 1</div>
-            <div id="info2">Information 2</div>
-            <div id="info3">Information 3</div>
-            <!-- Ajoutez plus d'éléments ici si nécessaire -->
+    <header class="portfolio-header">
+        <div class="portfolio-header__container">
+            <div class="portfolio-header__logo">
+                <h1><img class="logo" src="/img/mstile-310x310.png"></a></h1>
+            </div>
+            <nav class="portfolio-header__nav">
+                <ul class="portfolio-header__nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">CV</a></li>
+                    <li><a href="mailto:majd.elsebeiti@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="right">
-            <div data-info="info1">Element 1</div>
-            <div data-info="info2">Element 2</div>
-            <div data-info="info3">Element 3</div>
-            <!-- Ajoutez plus d'éléments ici si nécessaire -->
+    </header>
+
+     <!-- Portfolio Intro Section -->
+     <section class="portfolio-intro">
+        <div class="intro-container">
+            <p>Bonjour, je suis Majd EL SEBEITI, étudiant en BUT en informatique.</p>
+            <p>Sur ce portfolio, vous découvrirez mes projets et mes réalisations.</p>
+            <p>Sentez-vous libre de me contacter quand vous le voulez !</p>
+            <br><br><br><br><br><br>
+            <p>Mes projets : </p>
+
+        </div>
+    </section>
+
+    
+
+    <div class="code" id="code">
+
+        <div class="part">
+            <div class="content" id="Content1">
+                <h1>Classification automatique des dépêches</h1>
+                <p>  Durant ce projet, j'ai dû réaliser un programme en Java qui permettait de classifier un ensemble de dépêches en plusieurs catégories.</p>
+            </div>
+            <div class="content" id="Content2">
+                <h1>Etude sur le Titanic</h1>
+                <p>Durant ce projet, j'ai dû réaliser une étude sur les chances de survice lors du naufrage du Titanic. <br/> 
+                    J'ai dû ainsi modéliser et concevoir une base de données SQL et travailler sur cette base. </p>
+            </div>
+            <div class="content" id="Content3">
+                <h1>Création d'un site web</h1>
+                <p>Durant ce projet, j'ai dû réaliser un site web institutionnel du groupe IBM contenant assez d'informations pour un postulant pour un stage.</p>
+            </div>
+            <div class="content" id="Content4">
+                <h1>Application en Java</h1>
+                <p>Durant ce projet, j'ai dû réaliser une application lourde de gestion des courses de rallye à l'aide de Java et JavaFX.</p>
+            </div>
+            <div class="content" id="Content5">
+                <h1>Installation d'un serveur</h1>
+                <p>Durant ce projet, j'ai dû installer un serveur sans interface graphique sous Debian 12 avec Apache, PostgreSQL, PHP et PhpPgAdmin.
+                </p>
+            </div>
+            <div class="content" id="Content6">
+                <h1>Exploitation d'une base de données</h1>
+                <p>Durant ce projet, j'ai dû réaliser une étude sur les relations entre les indices nutritionelles 
+                    et le nutriscore en me basant sur la base de données de Open Food Facts </p>
+            </div>
+
+        </div>
+
+        <div class="column">
+            <section>
+                <img id="Triangle1" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element1"  class="row">
+                    <h1>Classification automatique des dépêches </h1>
+                    <figure>
+                        <img class="logo" src="/img/java.png"  alt="">
+                    </figure>
+
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle2" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element2" class="row">
+                    <h1>Etude sur le Titanic</p>
+                    <figure>
+                        <img class="logo" src="/img/postgresql.png"  alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle3" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element3" class="row">
+                    <h1>Création d'un site web</h1>
+                    <figure>
+                        <img class="logo" src="/img/html.png" alt="">
+                        <img class="logo" src="/img/css.png" alt="">
+
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <img id="Triangle4" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element4" class="row">
+                    <h1>Application en Java</h1>
+                    <figure>
+                        <img class="logo" src="/img/java.png" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle5" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element5" class="row">
+                    <h1>Installation d'un serveur</h1>
+                    <figure>
+                        <img class="logo" src="/img/debian.png" alt="">
+                        <img class="logo" src="/img/postgresql.png" alt="">
+                        <img class="logo" src="/img/php.png" alt="">
+                    </figure>
+                </div>
+            </section>
+
+            <section>
+                <img id="Triangle6" class="triangle" src="/img/triangle.svg" alt="">
+                <div id="Element6" class="row">
+                    <h1>Exploitation d'une base de données</h1>
+                    <figure>
+                        <img class="logo" src="/img/postgresql.png" alt="">
+                        <img class="logo" src="/img/R.png" alt="">
+
+                    </figure>
+                </div>
+            </section>
+
+            
         </div>
     </div>
+
+
+
+
+
+
+    <script>
+        
+
+        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var content = document.getElementById('Element1')
+            showContent(content.id)
+            Element1.classList.add('highlight')
+        });
+
+
+        function showContent(elementId) {
+    // Cacher tous les contenus
+    var allContents = document.querySelectorAll('.content');
+    var triangleContents = document.querySelectorAll('.triangle');
+    triangleContents.forEach(function(content) {
+        content.style.visibility = 'hidden';
+    });
+
+    allContents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Afficher le contenu associé à l'élément cliqué
+    var contentId = elementId.replace('Element', 'Content');
+    var contentTriangleId = elementId.replace('Element', 'Triangle');
+
+    var contentToShow = document.getElementById(contentId);
+
+    if (contentToShow) {
+        contentToShow.style.display = 'flex';
+    }
+
+    
+
+    var contentTriangleToShow = document.getElementById(contentTriangleId);
+    if (contentTriangleToShow) {
+        contentTriangleToShow.style.visibility = 'visible';
+        contentTriangleToShow, document.getElementById(contentId)
+    }
+}
+
+        // Ajouter des écouteurs d'événements à tous les éléments
+        var allElements = document.querySelectorAll('.row');
+        allElements.forEach(function(element) {
+
+
+        element.addEventListener('click', function(event) {
+        // Empêcher le comportement par défaut du lien
+        event.preventDefault();
+
+        // Appliquer la classe 'highlight' à l'élément cliqué
+        var currentHighlight = document.querySelector('.highlight');
+        if (currentHighlight) {
+            currentHighlight.classList.remove('highlight');
+        }
+        element.classList.add('highlight');
+
+        // Afficher le contenu associé
+        showContent(element.id);
+        scrollToMiddle(element);
+    });
+});
+
+        function isElementInMiddle(el) {
+            var rect = el.getBoundingClientRect();
+            return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+        }
+
+        function handleScroll() {
+    var allElements = document.querySelectorAll('.row');
+    allElements.forEach(function(element) {
+        if (isElementInMiddle(element)) {
+            // Appliquer la classe 'highlight' à l'élément au milieu de l'écran
+            var currentHighlight = document.querySelector('.highlight');
+            if (currentHighlight) {
+                currentHighlight.classList.remove('highlight');
+            }
+            element.classList.add('highlight');
+
+            // Afficher le contenu associé
+            showContent(element.id);
+        }
+    });
+}
+
+        
+
+        
+        window.addEventListener('scroll', handleScroll);
+
+        function scrollToMiddle(element) {
+    var elementRect = element.getBoundingClientRect();
+    window.scrollTo({
+        top: elementRect.top + window.scrollY - (window.innerHeight / 2 - elementRect.height / 2),
+        behavior: 'smooth'
+    });
+        }
+
+        function alignContentToTriangle(triangle, content) {
+    var triangleRect = triangle.getBoundingClientRect();
+    var containerRect = document.querySelector('.container').getBoundingClientRect();
+
+    // Ajuster la position horizontale du contenu pour l'aligner avec le triangle
+    var leftPosition = triangleRect.left - content.offsetWidth - 20; // Ajuste la position à gauche du triangle avec une marge de 20px
+    content.style.left = leftPosition + 'px';
+
+    // Ajuster la position verticale pour centrer par rapport au triangle
+    var topPosition = triangleRect.top + window.scrollY - containerRect.top + triangleRect.height / 2 - content.offsetHeight / 2;
+    content.style.top = topPosition + 'px';
+}    
+
+
+
+
+    </script>
 
 </body>
 </html>

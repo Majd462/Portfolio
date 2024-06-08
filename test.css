@@ -146,7 +146,6 @@ section {
     display: flex;
     flex-direction: column;
     flex-grow: 20;
-    position: relative;
     align-items: flex-end;
 }
 
@@ -330,4 +329,20 @@ p, h1 {
     .footer-section {
         max-width: 400px;
     }
+}
+
+
+/**/
+
+.competence-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.competence-name > h1 {
+    text-align: center;
+    height: 90px;
+    font-size: xx-large;
+    font-weight :bold;
 }

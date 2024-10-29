@@ -170,6 +170,7 @@ section {
 
 }
 
+
 .column {
     margin: 0;
     box-sizing: border-box;
@@ -341,6 +342,19 @@ p, h1 {
 }
 
 .competence-name > h1 {
+    text-align: center;
+    height: 90px;
+    font-size: xx-large;
+    font-weight :bold;
+}
+
+.projet-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projet-name > h1 {
     text-align: center;
     height: 90px;
     font-size: xx-large;

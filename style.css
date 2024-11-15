@@ -216,7 +216,7 @@ section {
 
 
 #triangle-IUT2, #triangle-Lycee {
-    background-color: none;
+    background-color: transparent;
 }
 
 
@@ -335,28 +335,33 @@ p, h1 {
 
 /**/
 
-.competence-name {
+
+.category {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.competence-name > h1 {
+.category > h1 {
     text-align: center;
     height: 90px;
     font-size: xx-large;
     font-weight :bold;
 }
 
-.projet-name {
+
+
+.about_p {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    font-size: 17px;
 }
 
-.projet-name > h1 {
-    text-align: center;
-    height: 90px;
-    font-size: xx-large;
-    font-weight :bold;
+.flagImage {
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }

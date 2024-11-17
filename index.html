@@ -26,15 +26,56 @@
         </div>
     </header>
 
-     <!-- Portfolio Intro Section -->
-     <section class="portfolio-intro">
-        <div class="intro-container">
-            <p>Bonjour, je suis Majd EL SEBEITI, étudiant en BUT en informatique.</p>
-            <p>Sur ce portfolio, vous découvrirez mes projets et mes réalisations.</p>
-            <p>Sentez-vous libre de me contacter quand vous le voulez !</p>
-            <br><br><br>
-        </div>
-    </section>
+
+
+        <section class="presentation category" id="Présentation" style="display: flex;">
+            <h1 style="">Présentation</h1>
+
+            <div class="intro-container">
+                <p>Bonjour, je suis Majd EL SEBEITI, étudiant en BUT en informatique.</p>
+                <p>Sur ce portfolio, vous découvrirez mes projets et mes réalisations.</p>
+                <p>Sentez-vous libre de me contacter quand vous le voulez !</p>
+                <br><br><br>
+            </div>
+        </section>
+
+
+        <section class="langues category" id="Langues" style="display: flex;">
+            <h1 style="">Langues</h1>
+            <div class="box_style about_p" id="about_languages_p">
+
+                <div>
+                    <img class="flagImage" src="./img/FR_flag.png" alt="Français">
+                    <h3>Français</h3>
+                    <p>Langue Maternelle</p>
+                </div>
+                <div>
+                    <img class="flagImage" src="./img/UK_FLAG.png" alt="Anglais">
+                    <h3>Anglais</h3>
+                    <p>Niveau B2 - Cambridge XXX</p>
+                </div>
+            </div>
+
+            <section class="soft-skills category" id="Soft_Skills" style="display: flex;">
+                <h1 style="">Mes softs skills</h1>
+
+                <div class="box_style about_p" id="about_skills_p">
+                    <div>
+                        <h3>Curiosité</h3>
+                        <h3>Autonomie</h3>
+                        <h3>Adaptable</h3>
+                        <h3>Communication</h3>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="passions category" id="Passions" style="display: flex;">
+                <h1 style="">Mes passions</h1>
+
+            </section>
+    </div>
 
     <section class="projet-name category" id="Mes_Projets" style="display: flex;">
         <h1 style="">Mes Projets :</h1>
@@ -61,6 +102,7 @@
             </div>
             <div class="content" id="Content4">
                 <h1>Application en Java</h1>
+
                 <p>Durant ce projet, j'ai dû réaliser une application lourde de gestion des courses de rallye à l'aide de Java et JavaFX.</p>
             </div>
             <div class="content" id="Content5">
@@ -309,113 +351,8 @@
 
 
 
-    <script>
-        
+    <script src="./script.js"></script>
 
-        
-        document.addEventListener('DOMContentLoaded', (event) => {
-            var content = document.getElementById('Element1')
-            showContent(content.id)
-            Element1.classList.add('highlight')
-
-            var contentwidth = content.offsetWidth;
-            var content1 = document.getElementById('widhtelement1');    
-            var content1width = content1.offsetWidth;    
-            var content2 = document.getElementById('competence-colonne');
-            content2.style.width = content1width+"px";
-        });
-
-
-        function showContent(elementId) {
-    // Cacher tous les contenus
-    var allContents = document.querySelectorAll('.content');
-    var triangleContents = document.querySelectorAll('.triangle');
-    triangleContents.forEach(function(content) {
-        content.style.visibility = 'hidden';
-    });
-
-    allContents.forEach(function(content) {
-        content.style.visibility = 'hidden';
-    });
-
-    // Afficher le contenu associé à l'élément cliqué
-    var contentId = elementId.replace('Element', 'Content');
-    var contentTriangleId = elementId.replace('Element', 'Triangle');
-
-    var contentToShow = document.getElementById(contentId);
-
-    if (contentToShow) {
-        contentToShow.style.visibility = 'visible';
-    }
-
-    
-
-    var contentTriangleToShow = document.getElementById(contentTriangleId);
-    if (contentTriangleToShow) {
-        contentTriangleToShow.style.visibility = 'visible';
-        contentTriangleToShow, document.getElementById(contentId)
-    }
-}
-
-        // Ajouter des écouteurs d'événements à tous les éléments
-        var allElements = document.querySelectorAll('.row');
-        allElements.forEach(function(element) {
-
-
-        element.addEventListener('click', function(event) {
-        // Empêcher le comportement par défaut du lien
-        event.preventDefault();
-
-        // Appliquer la classe 'highlight' à l'élément cliqué
-        var currentHighlight = document.querySelector('.highlight');
-        if (currentHighlight) {
-            currentHighlight.classList.remove('highlight');
-        }
-        element.classList.add('highlight');
-
-        // Afficher le contenu associé
-        showContent(element.id);
-        scrollToMiddle(element);
-    });
-});
-
-        function isElementInMiddle(el) {
-            var rect = el.getBoundingClientRect();
-            return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-        }
-
-        function handleScroll() {
-    var allElements = document.querySelectorAll('.row');
-    allElements.forEach(function(element) {
-        if (isElementInMiddle(element)) {
-            // Appliquer la classe 'highlight' à l'élément au milieu de l'écran
-            var currentHighlight = document.querySelector('.highlight');
-            if (currentHighlight) {
-                currentHighlight.classList.remove('highlight');
-            }
-            element.classList.add('highlight');
-
-            // Afficher le contenu associé
-            showContent(element.id);
-        }
-    });
-}
-
-        
-        window.addEventListener('scroll', handleScroll);
-
-        function scrollToMiddle(element) {
-    var elementRect = element.getBoundingClientRect();
-    window.scrollTo({
-        top: elementRect.top + window.scrollY - (window.innerHeight / 2 - elementRect.height / 2),
-        behavior: 'smooth'
-    });
-        }
-
-        
-
-
-    </script>
 
 </body>
 </html>

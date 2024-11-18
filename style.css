@@ -178,11 +178,11 @@ section {
     justify-content: center;
     flex-direction: column;
     gap: 0;
-    border: 1px grey solid;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: 1px 1px 1px 1px black;
+    /*box-shadow: 1px 1px 1px 1px black;*/
     flex-grow: 2;
+    border-width: 0;
 }
 
 .row {
@@ -357,6 +357,11 @@ p, h1 {
     justify-content: space-evenly;
     margin-bottom: 15px;
     font-size: 17px;
+}
+
+.box {
+    background-color: #c1c9c4;
+
 }
 
 .flagImage {

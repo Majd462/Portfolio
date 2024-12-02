@@ -127,15 +127,11 @@ body {
 }
 
 
-/*Dynamic section
-/
-/
-/
-/
-/
-/
-/
-*/
+h3 {
+    font-family: "MeriendaOne-Regular";
+}
+
+
 
 section {
     display: flex;
@@ -196,7 +192,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    text-decoration: none; /* Removes the underline of the link */
+    text-decoration: none;
     cursor: pointer;
     border: 1px black solid;
     width: 100%;
